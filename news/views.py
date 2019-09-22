@@ -43,3 +43,7 @@ def past_days_news(request,past_date):
 # Create your views here.
 def welcome(request):
     return render(request, 'welcome.html')
+
+def news_of_day(request):
+    date = dt.date.today()
+    return render(request, 'all-news/today-news.html', {"date": date,})
