@@ -20,16 +20,6 @@ def news_of_day(request):
             '''
     return HttpResponse(html)
 
-def convert_dates(dates):
-
-    # Function that gets the weekday number for the date.
-    day_number = dt.date.weekday(dates)
-
-    days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',"Sunday"]
-
-    # Returning the actual day of the week
-    day = days[day_number]
-    return day
 
 def past_days_news(request,past_date):
     
