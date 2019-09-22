@@ -10,3 +10,4 @@ def welcome(request):
     return HttpResponse('Welcome to the James Tribune')
 def news_of_day(request):
     date = dt.date.today()
+# FUNCTION TO CONVERT DATE OBJECT TO FIND EXACT DAY    
