@@ -49,3 +49,7 @@ def past_days_news(request,past_date):
         </html>
             '''
     return HttpResponse(html)
+
+# Create your views here.
+def welcome(request):
+    return render(request, 'welcome.html')
