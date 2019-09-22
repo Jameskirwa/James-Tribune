@@ -8,6 +8,17 @@ view takes request from a user prosses it and it returns response to the user
 # Create your views here.
 def welcome(request):
     return HttpResponse('Welcome to the James Tribune')
+# FUNCTION TO CONVERT DATE OBJECT TO FIND EXACT DAY 
 def news_of_day(request):
     date = dt.date.today()
-# FUNCTION TO CONVERT DATE OBJECT TO FIND EXACT DAY    
+    day = convert_dates(date)
+    html = f'''
+        <html>
+            <body>
+                <h1>News for {day} {date.day}-{date.month}-{date.year}</h1>
+            </body>
+        </html>
+            '''
+    return HttpResponse(html)
+
+   
